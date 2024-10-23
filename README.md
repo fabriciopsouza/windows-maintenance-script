@@ -2,6 +2,15 @@
 
 Script automatizado para manutenção preventiva e corretiva do Windows, desenvolvido para facilitar a rotina de verificações e reparos do sistema.
 
+## Características Principais
+
+- 🎯 Interface visual com barra de progresso
+- 🔄 Feedback em tempo real das verificações
+- 🌈 Interface colorida para melhor visualização
+- 📝 Logs formatados em UTF-8
+- ⏱️ Sistema de timeout para operações
+- 🛡️ Verificações completas do sistema
+
 ## Funcionalidades
 
 ### Verificações do Sistema
@@ -20,68 +29,81 @@ Script automatizado para manutenção preventiva e corretiva do Windows, desenvo
 - 🛡️ Análise de drivers e dispositivos
 
 ### Monitoramento
-- 📈 Análise de desempenho
+- 📈 Análise de desempenho em tempo real
 - 💻 Verificação de processos
 - 🔋 Monitoramento de energia
 - 🌡️ Verificação de temperatura
 - 🔍 Análise de registro do Windows
 
 ### Relatórios
-- 📊 Sistema de logs detalhado
+- 📊 Sistema de logs detalhado em UTF-8
 - 📝 Recomendações automáticas
 - 📈 Análise de tendências
 - 🔔 Alertas de problemas
-- 📤 Exportação de resultados
+- 📤 Exportação de resultados formatados
 
 ## Como Usar
 
-### Versão Python
-1. Instale as dependências:
+### Método Recomendado
+1. Execute `run_check.bat` como administrador
+2. Aguarde a verificação automática de dependências
+3. Observe o progresso na barra visual
+4. Verifique o relatório que abrirá automaticamente
+
+### Execução Manual Python
+```bash
+# Ambiente Conda
+conda activate base
+python system_check.py
+
+# OU Python direto
+python system_check.py
+```
+
+### Dependências
+Instaladas automaticamente pelo script:
 ```bash
 pip install wmi psutil colorama
 ```
 
-2. Execute o script como administrador:
-```bash
-python system_check.py
+## Estrutura do Projeto
 ```
-
-### Versão Batch
-1. Execute o script como administrador:
-```bash
-system_check.bat
+windows-maintenance-script/
+├── system_check.py     # Script principal Python
+├── run_check.bat       # Launcher com verificações
+└── README.md          # Documentação
 ```
-
-### Geral
-- Aguarde a conclusão das verificações
-- Verifique o relatório gerado automaticamente
-- Siga as recomendações fornecidas
-- Reinicie o computador quando solicitado
 
 ## Logs
 
 Os logs são salvos automaticamente em:
 ```
-C:\WindowsMaintenanceLogs\
+C:\WindowsMaintenanceLogs\system_check_YYYYMMDD_HHMMSS.log
 ```
 
-O nome do arquivo inclui data e hora da execução.
+Características dos logs:
+- Codificação UTF-8
+- Timestamp em cada entrada
+- Informações detalhadas
+- Formatação clara
+- Abertura automática após conclusão
 
 ## Pré-requisitos
 
 - Windows 10 ou 11
 - Direitos de administrador
-- Python 3.8+ (para versão Python)
-- Bibliotecas Python: wmi, psutil, colorama
+- Python 3.8+ ou Anaconda/Miniconda
+- Conexão com internet (para instalação de dependências)
 
 ## Recursos Adicionais
 
-- Interface colorida para melhor visualização
-- Detecção automática de problemas
-- Recomendações personalizadas
-- Análise detalhada de componentes
-- Suporte a múltiplos idiomas
-- Tratamento de exceções robusto
+- 🎨 Interface colorida para melhor visualização
+- 🔄 Barra de progresso em tempo real
+- 🔍 Detecção automática de problemas
+- 📊 Recomendações personalizadas
+- 🌐 Suporte a múltiplos idiomas
+- ⚡ Timeouts em operações longas
+- 🛠️ Tratamento de exceções robusto
 
 ## Autor
 
@@ -99,4 +121,16 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 ## Contribuições
 
-Contribuições são bem-vindas! Por favor, sinta-se à vontade para submeter pull requests.
+Contribuições são bem-vindas! Por favor:
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature
+3. Faça seus commits
+4. Envie um Pull Request
+
+## Últimas Atualizações
+
+- ✨ Adicionada barra de progresso visual
+- 🔄 Melhorado feedback em tempo real
+- 📝 Corrigido encoding para UTF-8
+- ⚡ Adicionado sistema de timeout
+- 🎨 Interface colorida aprimorada
