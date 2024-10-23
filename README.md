@@ -1,136 +1,51 @@
-# Windows System Maintenance Script
+# Windows System Maintenance
 
-Script automatizado para manutenção preventiva e corretiva do Windows, desenvolvido para facilitar a rotina de verificações e reparos do sistema.
+## Visão Geral
 
-## Características Principais
-
-- 🎯 Interface visual com barra de progresso
-- 🔄 Feedback em tempo real das verificações
-- 🌈 Interface colorida para melhor visualização
-- 📝 Logs formatados em UTF-8
-- ⏱️ Sistema de timeout para operações
-- 🛡️ Verificações completas do sistema
-
-## Funcionalidades
-
-### Verificações do Sistema
-- ✅ Verificação de integridade do sistema (SFC)
-- 🛠️ Reparo de imagem do sistema (DISM)
-- 💽 Verificação de disco (CHKDSK)
-- 🔍 Análise SMART dos discos
-- 📊 Monitoramento de temperatura do CPU
-- 💾 Verificação de memória RAM
-
-### Manutenção
-- 🧹 Limpeza de arquivos temporários
-- 🔄 Verificação de serviços do Windows Update
-- 🌐 Reset de componentes de rede
-- 📝 Verificação de logs de eventos
-- 🛡️ Análise de drivers e dispositivos
-
-### Monitoramento
-- 📈 Análise de desempenho em tempo real
-- 💻 Verificação de processos
-- 🔋 Monitoramento de energia
-- 🌡️ Verificação de temperatura
-- 🔍 Análise de registro do Windows
-
-### Relatórios
-- 📊 Sistema de logs detalhado em UTF-8
-- 📝 Recomendações automáticas
-- 📈 Análise de tendências
-- 🔔 Alertas de problemas
-- 📤 Exportação de resultados formatados
-
-## Como Usar
-
-### Método Recomendado
-1. Execute `run_check.bat` como administrador
-2. Aguarde a verificação automática de dependências
-3. Observe o progresso na barra visual
-4. Verifique o relatório que abrirá automaticamente
-
-### Execução Manual Python
-```bash
-# Ambiente Conda
-conda activate base
-python system_check.py
-
-# OU Python direto
-python system_check.py
-```
-
-### Dependências
-Instaladas automaticamente pelo script:
-```bash
-pip install wmi psutil colorama
-```
+O **Windows System Maintenance** é um conjunto de ferramentas automatizadas desenvolvidas para realizar análises abrangentes do sistema, monitorar o desempenho, verificar a saúde dos discos, monitorar serviços críticos e fornecer recomendações para otimização e manutenção. Ele também gerencia a agendamento dessas análises para execução semanalmente, garantindo que seu sistema esteja sempre saudável e funcionando de forma eficiente.
 
 ## Estrutura do Projeto
-```
-windows-maintenance-script/
-├── system_check.py     # Script principal Python
-├── run_check.bat       # Launcher com verificações
-└── README.md          # Documentação
-```
 
-## Logs
+- `system_check.py`: Script Python responsável por realizar as análises do sistema, gerar relatórios, gerenciar tarefas agendadas e fornecer recomendações.
+- `schedule_task.bat`: Script Batch para agendar a execução semanal do `system_check.py` no **Agendador de Tarefas** do Windows.
+- `README.md`: Este documento, fornecendo instruções detalhadas sobre configuração e uso.
 
-Os logs são salvos automaticamente em:
-```
-C:\WindowsMaintenanceLogs\system_check_YYYYMMDD_HHMMSS.log
-```
+## 1. Requisitos
 
-Características dos logs:
-- Codificação UTF-8
-- Timestamp em cada entrada
-- Informações detalhadas
-- Formatação clara
-- Abertura automática após conclusão
+### 1.1. Sistema Operacional
 
-## Pré-requisitos
+- **Windows 10** ou superior.
 
-- Windows 10 ou 11
-- Direitos de administrador
-- Python 3.8+ ou Anaconda/Miniconda
-- Conexão com internet (para instalação de dependências)
+### 1.2. Privilégios
 
-## Recursos Adicionais
+- **Administrador**: É necessário executar os scripts com privilégios de administrador para que possam criar e gerenciar tarefas agendadas corretamente.
 
-- 🎨 Interface colorida para melhor visualização
-- 🔄 Barra de progresso em tempo real
-- 🔍 Detecção automática de problemas
-- 📊 Recomendações personalizadas
-- 🌐 Suporte a múltiplos idiomas
-- ⚡ Timeouts em operações longas
-- 🛠️ Tratamento de exceções robusto
+### 1.3. Python
 
-## Autor
+- **Python 3.6** ou superior.
+- **Pip**: Gerenciador de pacotes do Python.
 
-**Fabricio Pinheiro Souza**
-- 📧 Email: fabriciopsouza@gmail.com
-- 🌐 GitHub: [@fabriciopsouza](https://github.com/fabriciopsouza)
+### 1.4. Dependências Python
 
-## Licença
+Os seguintes pacotes Python são necessários:
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+- `win10toast`: Para notificações no Windows.
+- `colorama`: Para cores no console.
+- `wmi`: Para interagir com a WMI do Windows.
+- `psutil`: Para monitoramento de processos e recursos do sistema.
 
-## Status do Projeto
+## 2. Instalação
 
-🚧 Em desenvolvimento ativo
+### 2.1. Instalar o Python
 
-## Contribuições
+Se ainda não tiver o Python instalado:
 
-Contribuições são bem-vindas! Por favor:
-1. Faça um Fork do projeto
-2. Crie uma Branch para sua Feature
-3. Faça seus commits
-4. Envie um Pull Request
+1. Baixe o instalador do Python a partir do [site oficial](https://www.python.org/downloads/windows/).
+2. Execute o instalador e certifique-se de marcar a opção **"Add Python to PATH"** durante a instalação.
 
-## Últimas Atualizações
+### 2.2. Verificar Instalação do Python
 
-- ✨ Adicionada barra de progresso visual
-- 🔄 Melhorado feedback em tempo real
-- 📝 Corrigido encoding para UTF-8
-- ⚡ Adicionado sistema de timeout
-- 🎨 Interface colorida aprimorada
+Abra o **Prompt de Comando** e execute:
+
+```bash
+python --version
