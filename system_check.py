@@ -13,7 +13,7 @@ import importlib
 import getpass
 
 # Definição da versão do script
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 # Função para instalar pacotes com subprocess.run e tratamento de erros
