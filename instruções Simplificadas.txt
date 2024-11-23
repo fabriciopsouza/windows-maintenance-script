@@ -1,0 +1,132 @@
+Parece que você executou o script `setup_env.bat` com sucesso. O ambiente virtual foi configurado e as dependências necessárias foram instaladas. O próximo passo é executar o script principal `system_optimizer.py` para realizar a otimização do sistema.
+
+---
+
+## **Próximos Passos**
+
+### **1. Ativar o Ambiente Virtual (se ainda não estiver ativo)**
+
+O script `setup_env.bat` deve ter ativado o ambiente virtual automaticamente. Você pode verificar se o ambiente virtual está ativo observando se o prompt de comando exibe `(env)` no início da linha. Se não estiver ativo, siga os passos abaixo:
+
+1. **Abra o Prompt de Comando como Administrador:**
+
+   - Clique no menu **Iniciar**.
+   - Digite **"cmd"**.
+   - Clique com o botão direito em **"Prompt de Comando"** e selecione **"Executar como administrador"**.
+
+2. **Navegue até o Diretório do Projeto:**
+
+   ```bash
+   cd C:\Users\fpsou\PycharmProjects\windows-maintenance-script
+   ```
+
+3. **Ative o Ambiente Virtual:**
+
+   ```bash
+   call env\Scripts\activate.bat
+   ```
+
+   Você deverá ver `(env)` no início da linha do prompt, indicando que o ambiente virtual está ativo.
+
+### **2. Executar o Script Principal**
+
+Com o ambiente virtual ativado, execute o script `system_optimizer.py`:
+
+```bash
+python system_optimizer.py
+```
+
+**Importante:** Certifique-se de que o Prompt de Comando está sendo executado como **administrador**. Algumas funcionalidades, como a criação de pontos de restauração e otimizações do sistema, exigem permissões elevadas.
+
+### **3. Acompanhar a Execução do Script**
+
+O script realizará as seguintes ações:
+
+- **Verificação da Versão do Aplicativo:** Confirma se você está usando a versão mais recente.
+- **Verificação de Dependências:** Garante que todas as bibliotecas necessárias estão instaladas.
+- **Criação de Ponto de Restauração:** Cria um ponto de restauração do sistema antes de fazer alterações.
+- **Análise do Sistema:** Verifica a saúde dos discos, desempenho da CPU e memória.
+- **Otimização do Sistema:** Executa otimizações gerais (como limpeza de arquivos temporários).
+- **Geração de Relatórios:** Cria relatórios em formatos TXT e JSON em `C:\WindowsMaintenanceLogs\`.
+- **Notificação ao Usuário:** Envia uma notificação informando que a otimização foi concluída.
+
+### **4. Verificar os Relatórios e Logs**
+
+Após a conclusão, você pode verificar:
+
+- **Relatórios:**
+  - TXT: `C:\WindowsMaintenanceLogs\relatorio_<data_hora>.txt`
+  - JSON: `C:\WindowsMaintenanceLogs\report_<data_hora>.json`
+- **Logs:**
+  - Log de execução: `C:\WindowsMaintenanceLogs\system_optimizer.log`
+
+Esses arquivos contêm detalhes sobre a análise e otimização realizadas.
+
+### **5. Atualizar o Pip (Opcional)**
+
+Você recebeu um aviso indicando que há uma nova versão do `pip` disponível:
+
+```plaintext
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+```
+
+Embora não seja obrigatório, é uma boa prática manter o `pip` atualizado. Para atualizar, execute:
+
+```bash
+python -m pip install --upgrade pip
+```
+
+### **6. Caso Encontre Erros ou Problemas**
+
+Se durante a execução do `system_optimizer.py` você encontrar algum erro ou comportamento inesperado, por favor, siga estas etapas:
+
+1. **Anote ou Copie as Mensagens de Erro:**
+
+   - Isso nos ajudará a entender exatamente o que está acontecendo.
+
+2. **Verifique o Log de Execução:**
+
+   - O arquivo `system_optimizer.log` contém informações detalhadas sobre a execução e pode indicar onde ocorreu o problema.
+
+3. **Compartilhe os Detalhes:**
+
+   - Informe as mensagens de erro específicas ou trechos relevantes do log para que possamos auxiliá-lo.
+
+### **7. Considerações Importantes**
+
+- **Permissões de Administrador:**
+
+  - Certifique-se de que o Prompt de Comando está sendo executado como administrador. Isso é necessário para criar pontos de restauração e executar certas otimizações.
+
+- **Ambiente Virtual:**
+
+  - Sempre ative o ambiente virtual antes de executar o script para garantir que todas as dependências estão disponíveis.
+
+- **Atualizações do Windows:**
+
+  - Mantenha o sistema operacional atualizado para evitar incompatibilidades.
+
+### **8. Instruções Resumidas**
+
+1. **Abra o Prompt de Comando como Administrador.**
+2. **Navegue até o diretório do projeto:**
+
+   ```bash
+   cd C:\Users\fpsou\PycharmProjects\windows-maintenance-script
+   ```
+
+3. **Ative o ambiente virtual:**
+
+   ```bash
+   call env\Scripts\activate.bat
+   ```
+
+4. **Execute o script principal:**
+
+   ```bash
+   python system_optimizer.py
+   ```
+
+5. **Aguarde a conclusão e verifique os relatórios e logs.**
+

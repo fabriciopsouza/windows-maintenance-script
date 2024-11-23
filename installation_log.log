@@ -1,34 +1,0 @@
-2024-10-23 11:53:43 - INFO - [setup_wmi] - WMI inicializado com sucesso.
-2024-10-23 11:53:43 - INFO - [run_analysis] - Iniciando Análise Completa do Sistema.
-2024-10-23 11:53:43 - INFO - [update_progress] - [36m[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 3.3% - Coletando informações do sistema[0m
-2024-10-23 11:53:43 - INFO - [check_system_info] - Sistema: Windows 11
-2024-10-23 11:53:43 - INFO - [check_system_info] - Versão: 10.0.22631
-2024-10-23 11:53:43 - INFO - [check_system_info] - Arquitetura: AMD64
-2024-10-23 11:53:43 - INFO - [check_system_info] - Processador: AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD
-2024-10-23 11:53:43 - INFO - [check_system_info] - Nome do Computador: Kerberus
-2024-10-23 11:53:43 - INFO - [check_system_info] - Memória Total: 31.14 GB
-2024-10-23 11:53:43 - INFO - [check_system_info] - Usuário: fpsou
-2024-10-23 11:53:43 - INFO - [check_system_info] - Boot Time: 2024-10-23 03:45:38
-2024-10-23 11:53:43 - INFO - [check_system_info] - Rede:
-2024-10-23 11:53:43 - INFO - [check_system_info] -   Ethernet: ['MAC: E8-9C-25-5F-88-B0', 'IPv4: 192.168.0.19', 'IPv6: 2804:14c:b521:827a:5176:1e4e:b40a:9a50', 'IPv6: 2804:14c:b521:827a:79aa:a9b2:5e2f:2561', 'IPv6: fe80::61ea:aa1e:4cfd:2cfa']
-2024-10-23 11:53:43 - INFO - [check_system_info] -   Conexão de Rede Bluetooth 3: ['MAC: 04-7F-0E-2D-0F-CF', 'IPv4: 169.254.235.240', 'IPv6: fe80::d263:854b:1b35:a3e']
-2024-10-23 11:53:43 - INFO - [check_system_info] -   vEthernet (WSL (Hyper-V firewall)): ['MAC: 00-15-5D-49-B2-A1', 'IPv4: 172.23.48.1', 'IPv6: fe80::817:ea27:1442:dc0b']
-2024-10-23 11:53:43 - INFO - [check_system_info] -   Loopback Pseudo-Interface 1: ['IPv4: 127.0.0.1', 'IPv6: ::1']
-2024-10-23 11:53:43 - INFO - [update_progress] - [36m[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.7% - Analisando saúde dos discos[0m
-2024-10-23 11:53:44 - ERROR - [check_disk_health] - Erro ao verificar partição C:\: argument 1 (impossible<bad format char>)
-2024-10-23 11:53:44 - ERROR - [check_disk_health] - Erro ao verificar partição D:\: argument 1 (impossible<bad format char>)
-2024-10-23 11:53:44 - ERROR - [check_disk_health] - Erro ao verificar partição E:\: argument 1 (impossible<bad format char>)
-2024-10-23 11:53:44 - ERROR - [check_disk_health] - Erro ao verificar partição F:\: argument 1 (impossible<bad format char>)
-2024-10-23 11:53:44 - ERROR - [check_disk_health] - Erro ao verificar partição G:\: argument 1 (impossible<bad format char>)
-2024-10-23 11:53:44 - ERROR - [check_disk_health] - Erro ao verificar partição X:\: argument 1 (impossible<bad format char>)
-2024-10-23 11:53:44 - INFO - [update_progress] - [36m[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 10.0% - Analisando desempenho do sistema[0m
-2024-10-23 11:53:45 - INFO - [update_progress] - [36m[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 13.3% - Verificando serviços do sistema[0m
-2024-10-23 11:53:47 - WARNING - [check_services] - Serviço crítico com problema: Proteção de Software - Estado: Stopped, Início: Auto
-2024-10-23 11:53:47 - WARNING - [check_services] - Serviço crítico com problema: Serviço Microsoft Defender Antivírus - Estado: Stopped, Início: Manual
-2024-10-23 11:53:47 - WARNING - [check_services] - Serviço crítico com problema: Windows Update - Estado: Stopped, Início: Manual
-2024-10-23 11:53:47 - INFO - [update_progress] - [36m[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 16.7% - Gerando recomendações[0m
-2024-10-23 11:53:47 - INFO - [update_progress] - [36m[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 20.0% - Gerando relatório final[0m
-2024-10-23 11:53:47 - INFO - [save_report] - Relatório salvo em: C:\WindowsMaintenanceLogs\relatorio_20241023_115343.txt
-2024-10-23 11:53:47 - INFO - [run_analysis] - Relatório exibido no console.
-2024-10-23 11:53:47 - INFO - [save_json_report] - Relatório JSON salvo em: C:\WindowsMaintenanceLogs\report_20241023_115343.json
-2024-10-23 11:53:47 - INFO - [run_analysis] - Análise concluída com sucesso.

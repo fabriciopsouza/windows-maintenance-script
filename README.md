@@ -1,51 +1,92 @@
-# Windows System Maintenance
+# SystemOptimizer
 
-## Visão Geral
+O **SystemOptimizer** é um script Python que realiza otimizações gerais no sistema Windows, incluindo:
 
-O **Windows System Maintenance** é um conjunto de ferramentas automatizadas desenvolvidas para realizar análises abrangentes do sistema, monitorar o desempenho, verificar a saúde dos discos, monitorar serviços críticos e fornecer recomendações para otimização e manutenção. Ele também gerencia a agendamento dessas análises para execução semanalmente, garantindo que seu sistema esteja sempre saudável e funcionando de forma eficiente.
+- Verificação e instalação de dependências.
+- Criação de ambiente virtual para execução isolada.
+- Criação de ponto de restauração do sistema.
+- Análise e otimização do desempenho do sistema.
+- Geração de relatórios detalhados.
+- Notificação ao usuário sobre os resultados.
 
-## Estrutura do Projeto
+## **Pré-requisitos**
 
-- `system_check.py`: Script Python responsável por realizar as análises do sistema, gerar relatórios, gerenciar tarefas agendadas e fornecer recomendações.
-- `schedule_task.bat`: Script Batch para agendar a execução semanal do `system_check.py` no **Agendador de Tarefas** do Windows.
-- `README.md`: Este documento, fornecendo instruções detalhadas sobre configuração e uso.
+- **Windows 10 ou Windows 11**
+- **Python 3.6+** instalado no sistema (recomendado utilizar o [Python 3.11](https://www.python.org/downloads/))
+- **Privilégios de administrador** para criar pontos de restauração e executar otimizações do sistema.
 
-## 1. Requisitos
+## **Instruções de Uso**
 
-### 1.1. Sistema Operacional
+### **1. Clonar o Repositório ou Baixar os Arquivos**
 
-- **Windows 10** ou superior.
+Baixe os arquivos do projeto e extraia-os em uma pasta de sua preferência, por exemplo, `C:\SystemOptimizer`.
 
-### 1.2. Privilégios
+### **2. Instalar o Python (se necessário)**
 
-- **Administrador**: É necessário executar os scripts com privilégios de administrador para que possam criar e gerenciar tarefas agendadas corretamente.
+Se você não tiver o Python instalado, faça o download em [python.org](https://www.python.org/downloads/) e instale-o.
 
-### 1.3. Python
+**Importante:** Durante a instalação, selecione a opção **"Add Python to PATH"**.
 
-- **Python 3.6** ou superior.
-- **Pip**: Gerenciador de pacotes do Python.
+### **3. Executar o Script de Configuração**
 
-### 1.4. Dependências Python
+Abra o **Prompt de Comando** ou **PowerShell** como **administrador**:
 
-Os seguintes pacotes Python são necessários:
+1. Clique no menu **Iniciar**.
+2. Digite **"cmd"** ou **"PowerShell"**.
+3. Clique com o botão direito em **Prompt de Comando** ou **PowerShell** e selecione **"Executar como administrador"**.
 
-- `win10toast`: Para notificações no Windows.
-- `colorama`: Para cores no console.
-- `wmi`: Para interagir com a WMI do Windows.
-- `psutil`: Para monitoramento de processos e recursos do sistema.
-
-## 2. Instalação
-
-### 2.1. Instalar o Python
-
-Se ainda não tiver o Python instalado:
-
-1. Baixe o instalador do Python a partir do [site oficial](https://www.python.org/downloads/windows/).
-2. Execute o instalador e certifique-se de marcar a opção **"Add Python to PATH"** durante a instalação.
-
-### 2.2. Verificar Instalação do Python
-
-Abra o **Prompt de Comando** e execute:
+Navegue até o diretório do projeto:
 
 ```bash
-python --version
+cd C:\SystemOptimizer
+
+
+---
+
+## **7. Instruções Adicionais para Usuários Não Técnicos**
+
+- **Passo a Passo Visual:**
+
+  1. **Baixe e instale o Python** se ainda não o fez.
+  2. **Baixe os arquivos do projeto** e extraia-os em uma pasta fácil de encontrar, como na área de trabalho.
+  3. **Abra o Prompt de Comando como administrador**:
+     - Clique no menu Iniciar.
+     - Digite "cmd".
+     - Clique com o botão direito em "Prompt de Comando" e selecione "Executar como administrador".
+  4. **Navegue até a pasta do projeto**:
+     ```bash
+     cd C:\Users\SeuUsuario\Desktop\SystemOptimizer
+     ```
+  5. **Execute o script de configuração**:
+     ```bash
+     setup_env.bat
+     ```
+  6. **Execute o script principal**:
+     ```bash
+     python system_optimizer.py
+     ```
+  7. **Aguarde a conclusão** e verifique as notificações na tela.
+
+- **Como Restaurar o Sistema:**
+
+  - Caso algo não funcione como esperado após a otimização, você pode restaurar o sistema ao ponto de restauração criado:
+    1. Abra o **Painel de Controle**.
+    2. Vá para **Recuperação** > **Abrir Restauração do Sistema**.
+    3. Selecione o ponto de restauração criado pelo **SystemOptimizer**.
+    4. Siga as instruções na tela.
+
+---
+
+## **8. Considerações de Segurança**
+
+- **Execução Segura:** O script foi projetado para ser seguro e não executar comandos maliciosos.
+- **Código Aberto:** Você pode revisar o código fonte para verificar todas as ações realizadas pelo script.
+- **Ponto de Restauração:** Um ponto de restauração é criado antes de qualquer modificação para garantir que você possa retornar ao estado anterior se necessário.
+
+---
+
+## **9. Conclusão**
+
+Com este conjunto de scripts e instruções, qualquer pessoa, mesmo sem conhecimento técnico aprofundado, poderá executar o script de otimização do sistema no Windows 11. O script é modular e pode ser estendido ou modificado conforme necessário.
+
+Se tiver dúvidas ou precisar de assistência adicional, sinta-se à vontade para pedir ajuda!
