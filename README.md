@@ -35,36 +35,37 @@ Abra o **Prompt de Comando** ou **PowerShell** como **administrador**:
 2. Digite **"cmd"** ou **"PowerShell"**.
 3. Clique com o botão direito em **Prompt de Comando** ou **PowerShell** e selecione **"Executar como administrador"**.
 
-Navegue até o diretório do projeto:
+### **1. Ativar o Ambiente Virtual (se ainda não estiver ativo)**
+
+O script `setup_env.bat` deve ter ativado o ambiente virtual automaticamente. Você pode verificar se o ambiente virtual está ativo observando se o prompt de comando exibe `(env)` no início da linha. Se não estiver ativo, siga os passos abaixo:
+
+1. **Abra o Prompt de Comando como Administrador:**
+
+   - Clique no menu **Iniciar**.
+   - Digite **"cmd"**.
+   - Clique com o botão direito em **"Prompt de Comando"** e selecione **"Executar como administrador"**.
+
+2. **Navegue até o Diretório do Projeto:**
+
+   ```bash
+   cd C:\Users\fpsou\PycharmProjects\windows-maintenance-script
+   ```
+
+3. **Ative o Ambiente Virtual:**
+
+   ```bash
+   call env\Scripts\activate.bat
+   ```
+
+   Você deverá ver `(env)` no início da linha do prompt, indicando que o ambiente virtual está ativo.
+
+### **2. Executar o Script Principal**
+
+Com o ambiente virtual ativado, execute o script `system_optimizer.py`:
 
 ```bash
-cd C:\SystemOptimizer
-
-
----
-
-## **7. Instruções Adicionais para Usuários Não Técnicos**
-
-- **Passo a Passo Visual:**
-
-  1. **Baixe e instale o Python** se ainda não o fez.
-  2. **Baixe os arquivos do projeto** e extraia-os em uma pasta fácil de encontrar, como na área de trabalho.
-  3. **Abra o Prompt de Comando como administrador**:
-     - Clique no menu Iniciar.
-     - Digite "cmd".
-     - Clique com o botão direito em "Prompt de Comando" e selecione "Executar como administrador".
-  4. **Navegue até a pasta do projeto**:
-     ```bash
-     cd C:\Users\SeuUsuario\Desktop\SystemOptimizer
-     ```
-  5. **Execute o script de configuração**:
-     ```bash
-     setup_env.bat
-     ```
-  6. **Execute o script principal**:
-     ```bash
-     python system_optimizer.py
-     ```
+python system_optimizer.py
+```
   7. **Aguarde a conclusão** e verifique as notificações na tela.
 
 - **Como Restaurar o Sistema:**
